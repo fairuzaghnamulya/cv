@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- ANIMATIONS ---
     document.body.classList.remove('is-entering');
-    const homeLink = document.querySelector('a[href="../../index.html"]');
+    const homeLink = document.querySelector('a[href="./index.html"]');
     if (homeLink) {
         homeLink.addEventListener('click', function(e) {
             e.preventDefault();
