@@ -1,0 +1,284 @@
+/* Audio Player Styles */
+
+.audio-player-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(30, 30, 47, 0.6);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.now-playing {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.now-playing h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #89b4fa;
+    font-weight: 600;
+}
+
+.now-playing p {
+    font-size: 1.1rem;
+    color: #cdd6f4;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.progress-container {
+    margin: 1.5rem 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    transition: height 0.2s ease;
+}
+
+.progress-bar:hover {
+    height: 6px;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(to right, #89b4fa, #00d4ff);
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #a6adc8;
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.control-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #cdd6f4;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.control-btn:hover {
+    background: rgba(137, 180, 250, 0.2);
+    color: #89b4fa;
+    border-color: rgba(137, 180, 250, 0.3);
+    transform: scale(1.05);
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+.control-btn.play-pause {
+    width: 54px;
+    height: 54px;
+    font-size: 1.4rem;
+    background: rgba(137, 180, 250, 0.1);
+}
+
+.control-btn.play-pause:hover {
+    background: rgba(137, 180, 250, 0.3);
+}
+
+.mode-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.mode-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #a6adc8;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.mode-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #cdd6f4;
+}
+
+.mode-btn.active {
+    background: #89b4fa;
+    color: #0A0E14;
+    border-color: #89b4fa;
+    font-weight: 500;
+}
+
+.search-container {
+    margin: 1.5rem 0;
+}
+
+.search-box {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #cdd6f4;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.search-box:focus {
+    border-color: #89b4fa;
+    box-shadow: 0 0 0 3px rgba(137, 180, 250, 0.2);
+}
+
+.search-box::placeholder {
+    color: #a6adc8;
+}
+
+.playlist-container {
+    margin-top: 1.5rem;
+    max-height: 400px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #89b4fa rgba(255, 255, 255, 0.1);
+}
+
+.playlist-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.playlist-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.playlist-container::-webkit-scrollbar-thumb {
+    background: #89b4fa;
+    border-radius: 3px;
+}
+
+.playlist-container::-webkit-scrollbar-thumb:hover {
+    background: #a6d1ff;
+}
+
+.playlist-item {
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+}
+
+.playlist-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.playlist-item.playing {
+    background: rgba(137, 180, 250, 0.15);
+    border-color: rgba(137, 180, 250, 0.3);
+}
+
+.playlist-item.playing .song-title {
+    color: #89b4fa;
+}
+
+.song-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.song-title {
+    font-weight: 500;
+    color: #cdd6f4;
+    margin-bottom: 0.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-artist {
+    font-size: 0.85rem;
+    color: #a6adc8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-duration {
+    font-size: 0.85rem;
+    color: #a6adc8;
+    margin-left: 1rem;
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .audio-player-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .controls {
+        gap: 1rem;
+    }
+    
+    .control-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+    
+    .control-btn.play-pause {
+        width: 46px;
+        height: 46px;
+        font-size: 1.2rem;
+    }
+    
+    .mode-controls {
+        gap: 0.5rem;
+    }
+    
+    .mode-btn {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
